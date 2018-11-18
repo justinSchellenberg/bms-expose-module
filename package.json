@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "typescript:build": "tsc --target es6",
-    "test": "mocha -r ts-node/register --require mock-local-storage test/**/*",
+    "test": "mocha -r ts-node/register test/**/*",
     "BDD": "onchange ./**/*.ts test/**/*.ts -- npm test",
-    "coverage": "nyc mocha -r ts-node/register --require mock-local-storage test/**/*"
+    "coverage": "nyc mocha -r ts-node/register test/**/*"
   },
   "nyc": {
     "extension": [
@@ -40,6 +40,7 @@
     "nyc": "^13.1.0",
     "onchange": "^5.0.2",
     "ts-node": "^7.0.1",
+    "tslint-consistent-codestyle": "^1.14.1",
     "typescript": "^3.1.3",
     "typings": "^2.1.1"
   }

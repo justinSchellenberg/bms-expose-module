@@ -1,1 +1,9 @@
-console.log("hello wrold!");
+
+
+export default function ExposeModule(module: Function, namespace: object){
+  
+  
+  
+  
+  
+}
