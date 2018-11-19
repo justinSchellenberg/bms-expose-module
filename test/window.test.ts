@@ -4,8 +4,6 @@ import Window from '../src/window';
 
 const expect = chai.expect;
 
-
-
 describe('Class - Window', () => {
   it('should have the window property be equal to current window object', () => {
     expect(Window.getWindow()).to.be.equal(window);

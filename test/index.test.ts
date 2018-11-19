@@ -24,5 +24,3 @@ describe('Function - ExposeModule', () => {
     expect(Window.getWindow().BOLD.BMS.BUILDS['testModule']).to.be.equal(module);
   });
 });
-
-
