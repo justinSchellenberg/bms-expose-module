@@ -1,6 +1,6 @@
 {
   "name": "bms-expose-module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "bms-expose-module. A Utility module used for exposing functions to the window object",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
