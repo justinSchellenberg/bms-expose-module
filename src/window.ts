@@ -3,9 +3,10 @@ class Window {
   private pointerWindow: any;
   private referenceWindow: any;
   private arrayNames: any;
-  
+
   constructor() {
-    if (!Window.instance) { // if an instance does not exist
+    if (!Window.instance) {
+      // if an instance does not exist
       this.pointerWindow = window || {};
       this.referenceWindow = this.pointerWindow;
       this.arrayNames = [];
@@ -13,29 +14,29 @@ class Window {
     }
     return Window.instance;
   }
-  public pushNamespace(property: string){
+  public pushNamespace(property: string) {
     this.arrayNames.push(property);
   }
-  public setNamespaceToWindow(){
+  public setNamespaceToWindow() {
     this.arrayNames.forEach((key: string) => {
       this.pointerWindow[key] = this.pointerWindow[key] || {};
       this.pointerWindow = this.pointerWindow[key];
-    })
+    });
   }
-  public getWindow(){
+  public getWindow() {
     return this.pointerWindow;
   }
-  public getReferenceWindow(){
+  public getReferenceWindow() {
     return this.referenceWindow;
   }
-  public resetWindow(){
+  public resetWindow() {
     this.pointerWindow = window || {};
     this.referenceWindow = this.pointerWindow;
   }
-  public setWindow(){
+  public setWindow() {
     window = this.referenceWindow;
   }
-  public setModule(module: any, moduleName: string){
+  public setModule(module: any, moduleName: string) {
     this.pointerWindow[moduleName] = module;
   }
 }
