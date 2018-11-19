@@ -1,1 +1,3 @@
-bms-expose-module
+# bms-expose-module
+[![Build Status](https://travis-ci.com/justinSchellenberg/bms-expose-module.svg?branch=master)](https://travis-ci.com/justinSchellenberg/bms-expose-module) [![Coverage Status](https://coveralls.io/repos/github/justinSchellenberg/bms-expose-module/badge.svg?branch=master)](https://coveralls.io/github/justinSchellenberg/bms-expose-module?branch=master) [![Maintainability](https://api.codeclimate.com/v1/badges/312a5a133f3047ac0975/maintainability)](https://codeclimate.com/github/justinSchellenberg/bms-expose-module/maintainability) [![GitHub issues](https://img.shields.io/github/issues/justinSchellenberg/bms-expose-module.svg?style=popout)](https://github.com/justinSchellenberg/bms-expose-module/issues) [![GitHub license](https://img.shields.io/github/license/justinSchellenberg/bms-expose-module.svg?style=popout)](https://github.com/justinSchellenberg/bms-expose-module/blob/master/LICENSE.md)
+
