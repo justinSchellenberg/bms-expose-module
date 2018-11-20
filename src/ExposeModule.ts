@@ -1,4 +1,4 @@
-import { IsEmptyObject, IsFunction, IsObject, IsObjectContainSpecifiedKeys  } from 'bms-utility-helper-functions';
+import { IsEmptyObject, IsFunction, IsObject, IsObjectContainSpecifiedKeys } from 'bms-utility-helper-functions';
 import Window from './Window';
 
 export default function ExposeModule(namespace: any): void {
@@ -8,7 +8,7 @@ export default function ExposeModule(namespace: any): void {
   }
 
   for (const key of Object.keys(namespace)) {
-    if(IsFunction(namespace[key])){
+    if (IsFunction(namespace[key])) {
       Window.setNamespaceToWindow();
       Window.setModule(namespace[key], key);
       Window.resetWindow();
