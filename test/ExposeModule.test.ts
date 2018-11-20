@@ -20,7 +20,11 @@ describe('Function - ExposeModule', () => {
   
   it('should set the module to the correct namespace', () => {
     const nameSpace = {BOLD: {BMS: {BUILDS: {test: module}}}};
+    const newNameSpace = {BOLD: {BMS: {BUILDS: {anotherKey: module}}}};
     ExposeModule(nameSpace);
-    expect(Window.getWindow().BOLD.BMS.BUILDS['test']).to.be.equal(module);
+    expect(Window.getWindow().BOLD.BMS.BUILDS.test).to.be.equal(module);
+    ExposeModule(newNameSpace);
+    console.log(Window.getWindow().BOLD.BMS.BUILDS);
+    expect(Window.getWindow().BOLD.BMS.BUILDS.anotherKey).to.be.equal(module);
   });
 });

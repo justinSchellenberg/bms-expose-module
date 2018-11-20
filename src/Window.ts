@@ -1,3 +1,5 @@
+import JSON = Mocha.reporters.JSON;
+
 class Window {
   private static instance: Window;
   private pointerWindow: any;
@@ -22,6 +24,7 @@ class Window {
       this.pointerWindow[key] = this.pointerWindow[key] || {};
       this.pointerWindow = this.pointerWindow[key];
     });
+    this.arrayNames = []; // clear the array after done
   }
   public getWindow() {
     return this.pointerWindow;
@@ -31,7 +34,7 @@ class Window {
   }
   public resetWindow() {
     this.pointerWindow = window || {};
-    this.referenceWindow = this.pointerWindow;
+    this.referenceWindow = window || {};
   }
   public setModule(module: any, moduleName: string) {
     this.pointerWindow[moduleName] = module;
