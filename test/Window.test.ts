@@ -12,7 +12,6 @@ describe('Class - Window', () => {
     Window.pushNamespace('BOLD');
     Window.pushNamespace('BMS');
     Window.setNamespaceToWindow();
-    Window.setWindow();
     Window.resetWindow();
     expect(Window.getReferenceWindow()).have.property("BOLD");
     expect(Window.getWindow()).have.property("BOLD");

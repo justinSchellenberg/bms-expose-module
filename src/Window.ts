@@ -33,9 +33,6 @@ class Window {
     this.pointerWindow = window || {};
     this.referenceWindow = this.pointerWindow;
   }
-  public setWindow() {
-    window = this.referenceWindow;
-  }
   public setModule(module: any, moduleName: string) {
     this.pointerWindow[moduleName] = module;
   }

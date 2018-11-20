@@ -12,15 +12,15 @@ describe('Function - ExposeModule', () => {
   it('should Throw an error if namespace is a malformed object', () => {
     const emptyNameSpace = {keyone:'hi',keytwo:'broken'};
     try {
-      expect(ExposeModule(module, 'testModule', emptyNameSpace)).to.throw(Error)
+      expect(ExposeModule(emptyNameSpace)).to.throw(Error)
     } catch (err) {
       expect(err.message).to.be.equal("The namespace object provided is Malformed! Cannot expose module to Window!");
     }
   });
   
   it('should set the module to the correct namespace', () => {
-    const nameSpace = {BOLD: {BMS: {BUILDS: {}}}};
-    ExposeModule(module, 'testModule',  nameSpace);
-    expect(Window.getWindow().BOLD.BMS.BUILDS['testModule']).to.be.equal(module);
+    const nameSpace = {BOLD: {BMS: {BUILDS: {test: module}}}};
+    ExposeModule(nameSpace);
+    expect(Window.getWindow().BOLD.BMS.BUILDS['test']).to.be.equal(module);
   });
 });
