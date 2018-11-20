@@ -1,7 +1,7 @@
 import * as chai from 'chai';
 import 'jsdom-global/register';
 import ExposeModule from '../src/ExposeModule';
-import Window from '../src/window';
+import Window from '../src/Window';
 
 const expect = chai.expect;
 
